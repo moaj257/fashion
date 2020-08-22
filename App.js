@@ -2,6 +2,7 @@ import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import OnBoarding from './src/Authentication/OnBoarding';
 import LoadAssets from './src/components/LoadAssets';
+import Welcome from './src/Authentication/Welcome';
 
 const fonts = {
   "SFProText-Bold": require("./assets/fonts/SF-Pro-Text-Bold.otf"),
@@ -13,6 +14,7 @@ const AuthenticationStack = createStackNavigator();
 const AuthenticationNavigator = () => (
   <AuthenticationStack.Navigator headerMode="none">
     <AuthenticationStack.Screen name="OnBoarding" component={OnBoarding} />
+    <AuthenticationStack.Screen name="Welcome" component={Welcome} />
   </AuthenticationStack.Navigator>
 )
 
