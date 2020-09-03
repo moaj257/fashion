@@ -17,11 +17,12 @@ const palette = {
 const theme = createTheme({
   colors: {
     primary: '#2CB9B0',
-    title: '#0C0D34',
+    secondary: '#0C0D34',
+    danger: '#FF0058',
     text: 'rgba(12, 13, 52, 70)',
     white: 'white',
     grey: 'rgba(12, 13, 52, 0.05)',
-    button: '#0C0D34',
+    darkGrey: '#8A8D90',
   },
   spacing: {
     s: 8,
@@ -37,14 +38,14 @@ const theme = createTheme({
   },
   textVariants: {
     hero: {fontSize: 70, lineHeight: 70, fontFamily: 'SFProDisplay-Bold', color: 'white', textAlign: 'center'},
-    title1: {fontFamily: 'SFProDisplay-Semibold', fontSize: 28, color: 'title', textAlign: 'center'},
-    title2: {fontFamily: 'SFProDisplay-Semibold', fontSize: 22, lineHeight: 30, color: 'title'},
+    title1: {fontFamily: 'SFProDisplay-Semibold', fontSize: 28, color: 'secondary', textAlign: 'center'},
+    title2: {fontFamily: 'SFProDisplay-Semibold', fontSize: 22, lineHeight: 30, color: 'secondary'},
     body: {fontFamily: 'SFProDisplay-Regular', fontSize: 15, lineHeight: 22, color: 'text'},
     button: {fontSize: 15, fontFamily: 'SFProDisplay-Medium'}
   }
 });
 
-export const Text = createText();
 export const Box = createBox();
+export const Text = createText();
 
 export default theme;

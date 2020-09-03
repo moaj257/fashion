@@ -13,7 +13,9 @@ const picture = {
 
 export const assets = [picture.src];
 
-const Welcome = () => (
+const onPress = navigation => navigation.navigate('Login');
+
+const Welcome = ({navigation}) => (
   <Box flex={1} backgroundColor="white">
     <Box flex={1} borderBottomRightRadius="xl" backgroundColor="grey" alignItems="center" justifyContent="flex-end">
       <Image source={picture.src} style={[styles.picture, {width: width, height: (width - picture.height) / picture.width}]} />
@@ -23,7 +25,7 @@ const Welcome = () => (
       <Box backgroundColor="white" borderTopLeftRadius="xl" flex={1} justifyContent="space-evenly" alignItems="center" padding="xl">
         <Text variant="title2">Let's get started</Text>
         <Text variant="body" textAlign="center">Login to your account below or sign up for an amazing experience</Text>
-        <Button variant="primary" label="Have an account? Login" />
+        <Button variant="primary" label="Have an account? Login" onPress={() => onPress(navigation)} />
         <Button label="Join Us, It's Free" />
         <Button variant="transparent" label="Forgot password?" />
       </Box>
